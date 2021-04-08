@@ -22,13 +22,12 @@ const videoblogSchema = new Schema({
     date: {
         type: Date,
         default: function() {
-            const date = new Date();
-            const Year = date.getFullYear();
-            return date.getFullYear(Year);
+            const today = new Date().toLocaleDateString();
+            return today;
         },
     },
     howtoenjoy: {
-        content: String,
+        type: String,
     }
 }, {
     timestamps: true
