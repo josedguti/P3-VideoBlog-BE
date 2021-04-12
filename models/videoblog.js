@@ -13,7 +13,7 @@ const videoblogSchema = new Schema({
     },
     author: {
         type: String,
-        required: true
+        default: 'Jose Gutierrez'
     },
     rating: {
         type: Number,
@@ -22,7 +22,7 @@ const videoblogSchema = new Schema({
     date: {
         type: Date,
         default: function() {
-            const today = new Date().toLocaleDateString();
+            const today = new Date().toDateString();
             return today;
         },
     },
