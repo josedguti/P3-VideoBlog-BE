@@ -17,10 +17,12 @@ async function create(req, res) {
     }
     try {
         const videoblog = await VideoBlog.create(req.body);
-        res.status(201).json(videoblog);
-        // index(req, res)
+        // res.status(201).json(videoblog);
+        index(req, res)
     } catch (error) {
+        console.log(error)
         res.status(401).json({ error: 'something went poops' });
+        
     }
 }
 

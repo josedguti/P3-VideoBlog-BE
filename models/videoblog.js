@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
+
 const videoblogSchema = new Schema({
     name: {
         type: String,
@@ -22,9 +23,9 @@ const videoblogSchema = new Schema({
     date: {
         type: Date,
         default: function() {
-            const today = new Date().toDateString();
+            const today = new Date().toLocaleDateString();
             return today;
-        },
+        }
     },
     howtoenjoy: {
         type: String,
