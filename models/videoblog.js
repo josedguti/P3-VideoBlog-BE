@@ -23,10 +23,10 @@ const videoblogSchema = new Schema({
     date: {
         type: Date,
         default: function() {
-            const today = new Date().toLocaleDateString();
-            return today;
+            const date = new Date();
+            return date.toDateString();
         }
-    },
+        },
     howtoenjoy: {
         type: String,
     }
