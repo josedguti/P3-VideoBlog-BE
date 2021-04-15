@@ -17,7 +17,6 @@ const videoblogSchema = new Schema({
     },
     author: {
         type: String,
-        default: 'Jose Gutierrez'
     },
     rating: {
         type: Number,
