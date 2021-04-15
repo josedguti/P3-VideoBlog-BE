@@ -4,6 +4,9 @@ const Schema = mongoose.Schema;
 
 
 const videoblogSchema = new Schema({
+    uid: {
+        type: String,
+    },
     name: {
         type: String,
         required: true
